@@ -1,7 +1,7 @@
 require 'net/http'
 require 'json'
 
-SCHEDULER.every '10h' do
+SCHEDULER.every '10h' , :first_in => 0 do |job|
 
   # Grab paper dates
   url = ENV['TRASH_URL']

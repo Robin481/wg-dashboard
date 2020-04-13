@@ -4,7 +4,7 @@ require 'json'
 SCHEDULER.every '10s' do
 
   # Grab paper dates
-  url = ENV ['TRASH_URL']
+  url = ENV['TRASH_URL']
   uri = URI.parse(url)
   http = Net::HTTP.new(uri.host, uri.port)
   http.use_ssl = true

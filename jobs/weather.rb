@@ -9,7 +9,7 @@ UNITS   = 'metric'
 # create free account on open weather map to get API key
 API_KEY = ENV['API_KEY']
 
-SCHEDULER.every '20s', :first_in => 0 do |job|
+SCHEDULER.every '10m', :first_in => 0 do |job|
 
   http = Net::HTTP.new('api.openweathermap.org')
   response = http.request(Net::HTTP::Get.new("/data/2.5/weather?id=#{CITY_ID}&units=#{UNITS}&appid=#{API_KEY}"))

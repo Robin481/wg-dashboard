@@ -1,6 +1,5 @@
 require 'net/http'
 require 'json'
-require "pry"
 
 SCHEDULER.every '1h', :first_in => 0 do |job|
 
